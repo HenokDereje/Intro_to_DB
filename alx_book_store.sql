@@ -1,9 +1,7 @@
--- Create database if it doesn't exist
 CREATE DATABASE IF NOT EXISTS alx_book_store;
 
 USE alx_book_store;
 
--- Create tables if they don't exist
 CREATE TABLE IF NOT EXISTS Authors (
     author_id INT AUTO_INCREMENT PRIMARY KEY,
     author_name VARCHAR(215)
@@ -40,5 +38,3 @@ CREATE TABLE IF NOT EXISTS Order_Details (
     FOREIGN KEY (order_id) REFERENCES Orders (order_id),
     FOREIGN KEY (book_id) REFERENCES Books (book_id)
 );
-
-SHOW TABLES
